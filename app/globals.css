@@ -1,7 +1,38 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --bg: #0a0a0a;
+  --bg-secondary: #141414;
+  --fg: #e5e5e5;
+  --fg-muted: #888;
+  --border: #262626;
+  --card: #111;
+  --card-hover: #1a1a1a;
+  --accent: #fff;
+  --accent-fg: #000;
+}
+
+[data-theme="light"] {
+  --bg: #F4F4F4;
+  --bg-secondary: #eaeaea;
+  --fg: #0E0E0E;
+  --fg-muted: #555;
+  --border: #ddd;
+  --card: #fff;
+  --card-hover: #f0f0f0;
+  --accent: #0E0E0E;
+  --accent-fg: #F4F4F4;
+}
 
 body {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
-  background: #0a0a0a;
-  color: #e5e5e5;
+  font-family: "Space Mono", monospace;
+  background: var(--bg);
+  color: var(--fg);
+  transition: background 0.3s, color 0.3s;
 }
+
+/* Letter spacing options - toggle class on body */
+.ls-tight { letter-spacing: -0.03em; }
+.ls-normal { letter-spacing: -0.015em; }
+.ls-default { letter-spacing: 0em; }
