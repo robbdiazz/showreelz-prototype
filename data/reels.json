@@ -1,14 +1,10 @@
 [
-  { "id": 1, "name": "Buro", "slug": "buro", "vimeoId": "825075642", "specialties": ["UX/UI", "Motion", "Branding"], "location": "", "website": "" },
   { "id": 2, "name": "J-Scott", "slug": "j-scott", "vimeoId": "840258711", "specialties": ["Motion", "2D"], "location": "", "website": "" },
   { "id": 3, "name": "Zyxel", "slug": "zyxel", "vimeoId": "719157036", "specialties": ["Motion", "3D"], "location": "", "website": "" },
   { "id": 4, "name": "Cub Studio", "slug": "cub-studio", "vimeoId": "759865345", "specialties": ["Branding", "Motion"], "location": "Brighton, UK", "website": "cubstudio.com" },
   { "id": 5, "name": "Re-Levant", "slug": "re-levant", "vimeoId": "801136710", "specialties": ["UX/UI", "Motion", "Branding"], "location": "", "website": "" },
   { "id": 6, "name": "Rokkaboy", "slug": "rokkaboy", "vimeoId": "231786495", "specialties": ["Motion", "Branding", "3D"], "location": "", "website": "" },
-  { "id": 7, "name": "Enzo Zejnulahi", "slug": "enzo-zejnulahi", "vimeoId": "821286243", "specialties": ["Motion", "2D"], "location": "", "website": "" },
-  { "id": 8, "name": "First Frame Studio", "slug": "first-frame-studio", "vimeoId": "829091837", "specialties": ["Motion", "3D"], "location": "", "website": "" },
   { "id": 9, "name": "Rob Diaz", "slug": "rob-diaz", "vimeoId": "802105022", "specialties": ["Motion", "3D"], "location": "Sagunto, Spain", "website": "robdiaz.com" },
-  { "id": 10, "name": "Ravie", "slug": "ravie", "vimeoId": "781968693", "specialties": ["Motion", "Branding"], "location": "", "website": "" },
   { "id": 11, "name": "Rob Millington", "slug": "rob-millington", "vimeoId": "717225022", "specialties": ["Motion", "3D"], "location": "", "website": "" },
   { "id": 12, "name": "Cameron Defrates", "slug": "cameron-defrates", "vimeoId": "796049847", "specialties": ["Motion"], "location": "", "website": "" },
   { "id": 13, "name": "Kommunikat", "slug": "kommunikat", "vimeoId": "799468703", "specialties": ["Motion", "Branding"], "location": "", "website": "" },
@@ -26,7 +22,6 @@
   { "id": 25, "name": "Colla Studio", "slug": "colla-studio", "vimeoId": "935503423", "specialties": ["Motion"], "location": "", "website": "" },
   { "id": 26, "name": "Kote Garcia", "slug": "kote-garcia", "vimeoId": "898041796", "specialties": ["Motion"], "location": "", "website": "" },
   { "id": 27, "name": "Daniel LeMunyan", "slug": "daniel-lemunyan", "vimeoId": "513964873", "specialties": ["Motion"], "location": "", "website": "" },
-  { "id": 28, "name": "Pablo Robleto", "slug": "pablo-robleto", "vimeoId": "826002213", "specialties": ["Motion"], "location": "", "website": "" },
   { "id": 29, "name": "Yoswar Saridam", "slug": "yoswar-saridam", "vimeoId": "810249235", "specialties": ["Motion"], "location": "", "website": "" },
   { "id": 30, "name": "Renderhell", "slug": "renderhell", "vimeoId": "799183671", "specialties": ["3D", "Motion"], "location": "", "website": "" }
 ]

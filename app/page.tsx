@@ -3,52 +3,12 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import reels from "@/data/reels.json";
+import Navbar from "@/components/Navbar";
+import Newsletter from "@/components/Newsletter";
+import Footer from "@/components/Footer";
 
 const ALL_TAGS = ["2D", "3D", "Motion", "Branding", "UX/UI", "Typography", "Character"];
 const PAGE_SIZE = 12;
-
-function ThemeToggle() {
-  const [dark, setDark] = useState(true);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("showreelz_theme");
-    if (saved === "light") {
-      setDark(false);
-      document.documentElement.setAttribute("data-theme", "light");
-    }
-  }, []);
-
-  const toggle = () => {
-    const next = !dark;
-    setDark(next);
-    if (next) {
-      document.documentElement.removeAttribute("data-theme");
-      localStorage.setItem("showreelz_theme", "dark");
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
-      localStorage.setItem("showreelz_theme", "light");
-    }
-  };
-
-  return (
-    <button
-      onClick={toggle}
-      className="relative w-14 h-7 rounded-full transition-colors duration-300"
-      style={{ background: dark ? "#333" : "#ccc" }}
-      aria-label="Toggle theme"
-    >
-      <span
-        className="absolute top-0.5 w-6 h-6 rounded-full transition-all duration-300 flex items-center justify-center text-xs"
-        style={{
-          left: dark ? "2px" : "calc(100% - 26px)",
-          background: dark ? "#0a0a0a" : "#F4F4F4",
-        }}
-      >
-        {dark ? "🌙" : "☀️"}
-      </span>
-    </button>
-  );
-}
 
 function SubmitModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [form, setForm] = useState({ name: "", email: "", website: "", social: "", reelLink: "" });
@@ -156,18 +116,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Nav - logo + submit only */}
-      <header className="sticky top-0 z-10 backdrop-blur-md border-b px-4 py-4" style={{ background: "color-mix(in srgb, var(--bg) 90%, transparent)", borderColor: "var(--border)" }}>
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold" style={{ color: "var(--fg)" }}>Showreelz</Link>
-          <div className="flex items-center gap-4">
-            <ThemeToggle />
-            <button onClick={() => setShowModal(true)} className="px-4 py-2 rounded-lg font-bold text-sm transition-opacity hover:opacity-80" style={{ background: "var(--accent)", color: "var(--accent-fg)" }}>
-              Submit
-            </button>
-          </div>
-        </div>
-      </header>
+      <Navbar onSubmit={() => setShowModal(true)} />
 
       {/* Filter tags - below nav */}
       <div className="px-4 pt-4 pb-2" style={{ borderBottom: "1px solid var(--border)" }}>
@@ -194,10 +143,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Grid */}
+      {/* Grid - 3 columns */}
       <main className="max-w-6xl mx-auto px-4 py-6 flex-1">
         <p className="text-sm mb-4" style={{ color: "var(--fg-muted)" }}>{filtered.length} reels</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {visible.map((reel) => (
             <Link
               href={`/reel/${reel.slug}`}
@@ -242,28 +191,8 @@ export default function Home() {
         )}
       </main>
 
-      {/* Footer - 3 columns */}
-      <footer className="border-t px-4 py-8 mt-12" style={{ borderColor: "var(--border)" }}>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <p className="font-bold text-lg" style={{ color: "var(--fg)" }}>Showreelz</p>
-            <p className="text-sm mt-1" style={{ color: "var(--fg-muted)" }}>Curated motion design reels</p>
-          </div>
-          <div className="space-y-2">
-            <p className="font-bold text-sm" style={{ color: "var(--fg)" }}>Browse</p>
-            <a href="#" className="block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>All Reels</a>
-            <a href="#" className="block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>Studios</a>
-            <a href="#" className="block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>Freelancers</a>
-          </div>
-          <div className="space-y-2">
-            <p className="font-bold text-sm" style={{ color: "var(--fg)" }}>Connect</p>
-            <a href="#" className="block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>Twitter/X</a>
-            <a href="#" className="block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>Instagram</a>
-            <a href="#" className="block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>Contact</a>
-          </div>
-        </div>
-      </footer>
-
+      <Newsletter />
+      <Footer />
       <SubmitModal open={showModal} onClose={() => setShowModal(false)} />
     </div>
   );

@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import reels from "@/data/reels.json";
+import Navbar from "@/components/Navbar";
+import Newsletter from "@/components/Newsletter";
+import Footer from "@/components/Footer";
 
 export default function ReelPage() {
   const params = useParams();
@@ -46,24 +49,22 @@ export default function ReelPage() {
 
   if (!reel) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center space-y-4">
-          <h1 className="text-2xl font-bold">Reel not found</h1>
-          <Link href="/" className="text-sm underline" style={{ color: "var(--fg-muted)" }}>Back to directory</Link>
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <div className="flex-1 flex items-center justify-center">
+          <div className="text-center space-y-4">
+            <h1 className="text-2xl font-bold">Reel not found</h1>
+            <Link href="/" className="text-sm underline" style={{ color: "var(--fg-muted)" }}>Back to directory</Link>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Nav */}
-      <header className="border-b px-4 py-4" style={{ borderColor: "var(--border)" }}>
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold" style={{ color: "var(--fg)" }}>Showreelz</Link>
-          <Link href="/" className="text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>Back</Link>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Content - 2 col video, 1 col details */}
       <main className="max-w-6xl mx-auto px-4 py-8 flex-1 w-full">
@@ -110,31 +111,16 @@ export default function ReelPage() {
                 View on Vimeo
               </a>
             </div>
+
+            <Link href="/" className="inline-block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
+              ← Back to directory
+            </Link>
           </div>
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t px-4 py-8 mt-12" style={{ borderColor: "var(--border)" }}>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <p className="font-bold text-lg" style={{ color: "var(--fg)" }}>Showreelz</p>
-            <p className="text-sm mt-1" style={{ color: "var(--fg-muted)" }}>Curated motion design reels</p>
-          </div>
-          <div className="space-y-2">
-            <p className="font-bold text-sm" style={{ color: "var(--fg)" }}>Browse</p>
-            <a href="#" className="block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>All Reels</a>
-            <a href="#" className="block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>Studios</a>
-            <a href="#" className="block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>Freelancers</a>
-          </div>
-          <div className="space-y-2">
-            <p className="font-bold text-sm" style={{ color: "var(--fg)" }}>Connect</p>
-            <a href="#" className="block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>Twitter/X</a>
-            <a href="#" className="block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>Instagram</a>
-            <a href="#" className="block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>Contact</a>
-          </div>
-        </div>
-      </footer>
+      <Newsletter />
+      <Footer />
     </div>
   );
 }
