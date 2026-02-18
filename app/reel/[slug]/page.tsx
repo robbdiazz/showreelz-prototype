@@ -126,7 +126,26 @@ export default function ReelPage() {
               )}
             </div>
 
-            <Link href="/" className="inline-block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
+            {/* Share */}
+            <button
+              onClick={() => {
+                const url = window.location.href;
+                if (navigator.share) {
+                  navigator.share({ title: `${reel.name} - MotionReelz`, url });
+                } else {
+                  navigator.clipboard.writeText(url);
+                  const btn = document.getElementById("share-btn");
+                  if (btn) { btn.textContent = "Link copied!"; setTimeout(() => { btn.textContent = "Share this reel"; }, 2000); }
+                }
+              }}
+              id="share-btn"
+              className="px-4 py-2 rounded-lg text-sm font-bold border transition hover:opacity-80"
+              style={{ borderColor: "var(--border)", color: "var(--fg)" }}
+            >
+              Share this reel
+            </button>
+
+            <Link href="/" className="inline-block text-sm transition hover:opacity-70 mt-2" style={{ color: "var(--fg-muted)" }}>
               ← Back to directory
             </Link>
           </div>
