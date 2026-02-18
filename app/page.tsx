@@ -144,9 +144,9 @@ export default function Home() {
       </div>
 
       {/* Grid - 2 columns */}
-      <main className="max-w-5xl mx-auto px-6 py-6 flex-1">
+      <main className="max-w-5xl mx-auto px-6 py-6 flex-1 w-full">
         <p className="text-sm mb-4" style={{ color: "var(--fg-muted)" }}>{filtered.length} reels</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
           {visible.map((reel) => (
             <Link
               href={`/reel/${reel.slug}`}
