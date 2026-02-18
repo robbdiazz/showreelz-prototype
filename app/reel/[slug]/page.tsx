@@ -25,7 +25,7 @@ export default function ReelPage() {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "motionreelz2026") {
+    if (password === "showreelz2026") {
       setAuthed(true);
       sessionStorage.setItem("motionreelz_auth", "1");
     } else {
