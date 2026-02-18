@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 
-const ALL_TAGS = ["2D", "3D", "Motion", "Branding", "UX/UI", "Typography", "Character"];
+const ALL_TAGS = ["2D", "3D", "Motion", "Branding", "UX/UI"];
 const PAGE_SIZE = 12;
 
 function SubmitModal({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -84,9 +84,10 @@ export default function Home() {
     setVisibleCount(PAGE_SIZE);
   };
 
+  const approved = reels.filter((r: any) => r.status === "approved");
   const filtered = activeFilters.length === 0
-    ? reels
-    : reels.filter((r) => r.specialties.some((s: string) => activeFilters.includes(s)));
+    ? approved
+    : approved.filter((r: any) => r.specialties.some((s: string) => activeFilters.includes(s)));
 
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;

@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export default function ReelPage() {
   const params = useParams();
   const slug = params.slug as string;
-  const reel = reels.find((r) => r.slug === slug);
+  const reel = reels.find((r) => r.slug === slug && r.status === "approved");
 
   const [authed, setAuthed] = useState(false);
   const [password, setPassword] = useState("");
@@ -66,7 +66,6 @@ export default function ReelPage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* Content - 2 col video, 1 col details */}
       <main className="max-w-5xl mx-auto px-6 py-8 flex-1 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Video - 2 cols */}
@@ -103,13 +102,28 @@ export default function ReelPage() {
             {/* Links */}
             <div className="space-y-2">
               {reel.website && (
-                <a href={`https://${reel.website}`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg)" }}>
+                <a href={`https://${reel.website}?ref=showreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg)" }}>
                   {reel.website}
                 </a>
               )}
-              <a href={`https://vimeo.com/${reel.vimeoId}`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
-                View on Vimeo
+              <a href={`https://vimeo.com/${reel.vimeoId}?ref=showreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
+                Vimeo
               </a>
+              {reel.linkedin && (
+                <a href={`https://linkedin.com/in/${reel.linkedin}?ref=showreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
+                  LinkedIn
+                </a>
+              )}
+              {reel.twitter && (
+                <a href={`https://x.com/${reel.twitter}?ref=showreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
+                  X / Twitter
+                </a>
+              )}
+              {reel.instagram && (
+                <a href={`https://instagram.com/${reel.instagram}?ref=showreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
+                  Instagram
+                </a>
+              )}
             </div>
 
             <Link href="/" className="inline-block text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
