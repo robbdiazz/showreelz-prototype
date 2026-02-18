@@ -18,16 +18,16 @@ export default function ReelPage() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && sessionStorage.getItem("showreelz_auth") === "1") {
+    if (typeof window !== "undefined" && sessionStorage.getItem("motionreelz_auth") === "1") {
       setAuthed(true);
     }
   }, []);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "showreelz2026") {
+    if (password === "motionreelz2026") {
       setAuthed(true);
-      sessionStorage.setItem("showreelz_auth", "1");
+      sessionStorage.setItem("motionreelz_auth", "1");
     } else {
       setError(true);
     }
@@ -37,7 +37,7 @@ export default function ReelPage() {
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
         <form onSubmit={handleLogin} className="w-full max-w-sm space-y-6 text-center">
-          <h1 className="text-3xl font-bold" style={{ color: "var(--fg)" }}>Showreelz</h1>
+          <h1 className="text-3xl font-bold" style={{ color: "var(--fg)" }}>MotionReelz</h1>
           <p className="text-sm" style={{ color: "var(--fg-muted)" }}>Enter password to continue</p>
           <input type="password" value={password} onChange={(e) => { setPassword(e.target.value); setError(false); }} placeholder="Password" className="w-full px-4 py-3 rounded-lg text-sm" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border)", color: "var(--fg)" }} />
           {error && <p className="text-red-400 text-sm">Wrong password</p>}
@@ -102,25 +102,25 @@ export default function ReelPage() {
             {/* Links */}
             <div className="space-y-2">
               {reel.website && (
-                <a href={`https://${reel.website}?ref=showreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg)" }}>
+                <a href={`https://${reel.website}?ref=motionreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg)" }}>
                   {reel.website}
                 </a>
               )}
-              <a href={`https://vimeo.com/${reel.vimeoId}?ref=showreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
+              <a href={`https://vimeo.com/${reel.vimeoId}?ref=motionreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
                 Vimeo
               </a>
               {reel.linkedin && (
-                <a href={`https://linkedin.com/in/${reel.linkedin}?ref=showreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
+                <a href={`https://linkedin.com/in/${reel.linkedin}?ref=motionreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
                   LinkedIn
                 </a>
               )}
               {reel.twitter && (
-                <a href={`https://x.com/${reel.twitter}?ref=showreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
+                <a href={`https://x.com/${reel.twitter}?ref=motionreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
                   X / Twitter
                 </a>
               )}
               {reel.instagram && (
-                <a href={`https://instagram.com/${reel.instagram}?ref=showreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
+                <a href={`https://instagram.com/${reel.instagram}?ref=motionreelz`} target="_blank" rel="noopener noreferrer" className="block text-sm underline transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
                   Instagram
                 </a>
               )}

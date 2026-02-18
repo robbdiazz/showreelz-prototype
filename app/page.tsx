@@ -62,16 +62,16 @@ export default function Home() {
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && sessionStorage.getItem("showreelz_auth") === "1") {
+    if (typeof window !== "undefined" && sessionStorage.getItem("motionreelz_auth") === "1") {
       setAuthed(true);
     }
   }, []);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "showreelz2026") {
+    if (password === "motionreelz2026") {
       setAuthed(true);
-      sessionStorage.setItem("showreelz_auth", "1");
+      sessionStorage.setItem("motionreelz_auth", "1");
     } else {
       setError(true);
     }
@@ -96,7 +96,7 @@ export default function Home() {
     return (
       <div className="min-h-screen flex items-center justify-center px-4">
         <form onSubmit={handleLogin} className="w-full max-w-sm space-y-6 text-center">
-          <h1 className="text-3xl font-bold" style={{ color: "var(--fg)" }}>Showreelz</h1>
+          <h1 className="text-3xl font-bold" style={{ color: "var(--fg)" }}>MotionReelz</h1>
           <p className="text-sm" style={{ color: "var(--fg-muted)" }}>Enter password to continue</p>
           <input
             type="password"

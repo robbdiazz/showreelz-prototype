@@ -7,7 +7,7 @@ function ThemeToggle() {
   const [dark, setDark] = useState(true);
 
   useEffect(() => {
-    const saved = localStorage.getItem("showreelz_theme");
+    const saved = localStorage.getItem("motionreelz_theme");
     if (saved === "light") {
       setDark(false);
       document.documentElement.setAttribute("data-theme", "light");
@@ -19,10 +19,10 @@ function ThemeToggle() {
     setDark(next);
     if (next) {
       document.documentElement.removeAttribute("data-theme");
-      localStorage.setItem("showreelz_theme", "dark");
+      localStorage.setItem("motionreelz_theme", "dark");
     } else {
       document.documentElement.setAttribute("data-theme", "light");
-      localStorage.setItem("showreelz_theme", "light");
+      localStorage.setItem("motionreelz_theme", "light");
     }
   };
 
@@ -55,7 +55,7 @@ export default function Navbar({ onSubmit }: { onSubmit?: () => void }) {
     >
       <div className="max-w-5xl mx-auto flex items-center justify-between">
         <Link href="/" className="text-xl font-bold" style={{ color: "var(--fg)" }}>
-          Showreelz
+          MotionReelz
         </Link>
         <div className="flex items-center gap-4">
           <ThemeToggle />

@@ -1,27 +1,426 @@
 [
-  { "id": 2, "name": "J-Scott", "slug": "j-scott", "vimeoId": "840258711", "specialties": ["Motion", "2D"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 3, "name": "Zyxel", "slug": "zyxel", "vimeoId": "719157036", "specialties": ["Motion", "3D"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 4, "name": "Cub Studio", "slug": "cub-studio", "vimeoId": "759865345", "specialties": ["Branding", "Motion"], "location": "Brighton, UK", "website": "cubstudio.com", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 5, "name": "Re-Levant", "slug": "re-levant", "vimeoId": "801136710", "specialties": ["UX/UI", "Motion", "Branding"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 6, "name": "Rokkaboy", "slug": "rokkaboy", "vimeoId": "231786495", "specialties": ["Motion", "Branding", "3D"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 9, "name": "Rob Diaz", "slug": "rob-diaz", "vimeoId": "802105022", "specialties": ["Motion", "3D"], "location": "Valencia, Spain", "website": "robdiaz.com", "linkedin": "robdiaz3d", "twitter": "robdiaz3d", "instagram": "robdiaz3d", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 11, "name": "Rob Millington", "slug": "rob-millington", "vimeoId": "717225022", "specialties": ["Motion", "3D"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 12, "name": "Cameron Defrates", "slug": "cameron-defrates", "vimeoId": "796049847", "specialties": ["Motion"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 13, "name": "Kommunikat", "slug": "kommunikat", "vimeoId": "799468703", "specialties": ["Motion", "Branding"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 14, "name": "Lusion", "slug": "lusion", "vimeoId": "761102167", "specialties": ["UX/UI", "Motion", "3D"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 15, "name": "Josh Krauth-Harding", "slug": "josh-krauth-harding", "vimeoId": "785110776", "specialties": ["Motion", "2D"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 16, "name": "Alex Barnet", "slug": "alex-barnet", "vimeoId": "809779374", "specialties": ["Motion", "Branding", "3D"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 17, "name": "Gulya Voronova", "slug": "gulya-voronova", "vimeoId": "778131303", "specialties": ["Motion", "3D"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 18, "name": "Dase Boogie", "slug": "dase-boogie", "vimeoId": "784828561", "specialties": ["Motion", "2D"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 19, "name": "Merci-Michel", "slug": "merci-michel", "vimeoId": "752053209", "specialties": ["UX/UI", "3D"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 20, "name": "247 Studio", "slug": "247-studio", "vimeoId": "792995890", "specialties": ["Branding"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 21, "name": "Unseen Studio", "slug": "unseen-studio", "vimeoId": "776542257", "specialties": ["UX/UI", "Motion", "Branding", "3D"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 22, "name": "colorsynth", "slug": "colorsynth", "vimeoId": "1162233030", "specialties": ["Motion", "2D", "3D"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 23, "name": "Robert Brienza", "slug": "robert-brienza", "vimeoId": "1063348177", "specialties": ["Motion"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 24, "name": "Sam Mularczyk", "slug": "sam-mularczyk", "vimeoId": "1035418459", "specialties": ["Motion"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 25, "name": "Colla Studio", "slug": "colla-studio", "vimeoId": "935503423", "specialties": ["Motion"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 26, "name": "Kote Garcia", "slug": "kote-garcia", "vimeoId": "898041796", "specialties": ["Motion"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 27, "name": "Daniel LeMunyan", "slug": "daniel-lemunyan", "vimeoId": "513964873", "specialties": ["Motion"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 29, "name": "Yoswar Saridam", "slug": "yoswar-saridam", "vimeoId": "810249235", "specialties": ["Motion"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" },
-  { "id": 30, "name": "Renderhell", "slug": "renderhell", "vimeoId": "799183671", "specialties": ["3D", "Motion"], "location": "", "website": "", "linkedin": "", "twitter": "", "instagram": "", "status": "approved", "submittedAt": "2026-02-17" }
+  {
+    "id": 2,
+    "name": "J-Scott",
+    "slug": "j-scott",
+    "vimeoId": "840258711",
+    "specialties": [
+      "Motion",
+      "2D"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 3,
+    "name": "Zyxel",
+    "slug": "zyxel",
+    "vimeoId": "719157036",
+    "specialties": [
+      "Motion",
+      "3D"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 4,
+    "name": "Cub Studio",
+    "slug": "cub-studio",
+    "vimeoId": "759865345",
+    "specialties": [
+      "Branding",
+      "Motion"
+    ],
+    "location": "Brighton, UK",
+    "website": "cubstudio.com",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 5,
+    "name": "Re-Levant",
+    "slug": "re-levant",
+    "vimeoId": "801136710",
+    "specialties": [
+      "UX/UI",
+      "Motion",
+      "Branding"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 6,
+    "name": "Rokkaboy",
+    "slug": "rokkaboy",
+    "vimeoId": "231786495",
+    "specialties": [
+      "Motion",
+      "Branding",
+      "3D"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 9,
+    "name": "Rob Diaz",
+    "slug": "rob-diaz",
+    "vimeoId": "802105022",
+    "specialties": [
+      "Motion",
+      "3D"
+    ],
+    "location": "Valencia, Spain",
+    "website": "robdiaz.com",
+    "linkedin": "robbdiazz",
+    "twitter": "robbdiazz",
+    "instagram": "robdiaz",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 11,
+    "name": "Rob Millington",
+    "slug": "rob-millington",
+    "vimeoId": "717225022",
+    "specialties": [
+      "Motion",
+      "3D"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 12,
+    "name": "Cameron Defrates",
+    "slug": "cameron-defrates",
+    "vimeoId": "796049847",
+    "specialties": [
+      "Motion"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 13,
+    "name": "Kommunikat",
+    "slug": "kommunikat",
+    "vimeoId": "799468703",
+    "specialties": [
+      "Motion",
+      "Branding"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 14,
+    "name": "Lusion",
+    "slug": "lusion",
+    "vimeoId": "761102167",
+    "specialties": [
+      "UX/UI",
+      "Motion",
+      "3D"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 15,
+    "name": "Josh Krauth-Harding",
+    "slug": "josh-krauth-harding",
+    "vimeoId": "785110776",
+    "specialties": [
+      "Motion",
+      "2D"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 16,
+    "name": "Alex Barnet",
+    "slug": "alex-barnet",
+    "vimeoId": "809779374",
+    "specialties": [
+      "Motion",
+      "Branding",
+      "3D"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 17,
+    "name": "Gulya Voronova",
+    "slug": "gulya-voronova",
+    "vimeoId": "778131303",
+    "specialties": [
+      "Motion",
+      "3D"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 18,
+    "name": "Dase Boogie",
+    "slug": "dase-boogie",
+    "vimeoId": "784828561",
+    "specialties": [
+      "Motion",
+      "2D"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 19,
+    "name": "Merci-Michel",
+    "slug": "merci-michel",
+    "vimeoId": "752053209",
+    "specialties": [
+      "UX/UI",
+      "3D"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 20,
+    "name": "247 Studio",
+    "slug": "247-studio",
+    "vimeoId": "792995890",
+    "specialties": [
+      "Branding"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 21,
+    "name": "Unseen Studio",
+    "slug": "unseen-studio",
+    "vimeoId": "776542257",
+    "specialties": [
+      "UX/UI",
+      "Motion",
+      "Branding",
+      "3D"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 22,
+    "name": "colorsynth",
+    "slug": "colorsynth",
+    "vimeoId": "1162233030",
+    "specialties": [
+      "Motion",
+      "2D",
+      "3D"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 23,
+    "name": "Robert Brienza",
+    "slug": "robert-brienza",
+    "vimeoId": "1063348177",
+    "specialties": [
+      "Motion"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 24,
+    "name": "Sam Mularczyk",
+    "slug": "sam-mularczyk",
+    "vimeoId": "1035418459",
+    "specialties": [
+      "Motion"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 25,
+    "name": "Colla Studio",
+    "slug": "colla-studio",
+    "vimeoId": "935503423",
+    "specialties": [
+      "Motion"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 26,
+    "name": "Kote Garcia",
+    "slug": "kote-garcia",
+    "vimeoId": "898041796",
+    "specialties": [
+      "Motion"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 27,
+    "name": "Daniel LeMunyan",
+    "slug": "daniel-lemunyan",
+    "vimeoId": "513964873",
+    "specialties": [
+      "Motion"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 29,
+    "name": "Yoswar Saridam",
+    "slug": "yoswar-saridam",
+    "vimeoId": "810249235",
+    "specialties": [
+      "Motion"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  },
+  {
+    "id": 30,
+    "name": "Renderhell",
+    "slug": "renderhell",
+    "vimeoId": "799183671",
+    "specialties": [
+      "3D",
+      "Motion"
+    ],
+    "location": "",
+    "website": "",
+    "linkedin": "",
+    "twitter": "",
+    "instagram": "",
+    "status": "approved",
+    "submittedAt": "2026-02-17"
+  }
 ]

@@ -32,18 +32,34 @@ export default function AdminPage() {
   const [tab, setTab] = useState<"pending" | "approved" | "rejected">("approved");
 
   useEffect(() => {
-    if (typeof window !== "undefined" && sessionStorage.getItem("showreelz_admin") === "1") {
+    if (typeof window !== "undefined" && sessionStorage.getItem("motionreelz_admin") === "1") {
       setAuthed(true);
     }
-    setReels(allReels as Reel[]);
-    setRejected(rejectedReels as Reel[]);
+    // Load from localStorage if available, otherwise use JSON files
+    const savedReels = typeof window !== "undefined" ? localStorage.getItem("motionreelz_reels") : null;
+    const savedRejected = typeof window !== "undefined" ? localStorage.getItem("motionreelz_rejected") : null;
+    setReels(savedReels ? JSON.parse(savedReels) : allReels as Reel[]);
+    setRejected(savedRejected ? JSON.parse(savedRejected) : rejectedReels as Reel[]);
   }, []);
+
+  // Auto-save to localStorage on every change
+  useEffect(() => {
+    if (reels.length > 0) {
+      localStorage.setItem("motionreelz_reels", JSON.stringify(reels));
+    }
+  }, [reels]);
+
+  useEffect(() => {
+    if (rejected.length > 0 || localStorage.getItem("motionreelz_rejected")) {
+      localStorage.setItem("motionreelz_rejected", JSON.stringify(rejected));
+    }
+  }, [rejected]);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     if (password === "adminreelz2000") {
       setAuthed(true);
-      sessionStorage.setItem("showreelz_admin", "1");
+      sessionStorage.setItem("motionreelz_admin", "1");
     } else {
       setError(true);
     }
@@ -112,7 +128,7 @@ export default function AdminPage() {
           {pendingCount > 0 ? `${pendingCount} reels to review` : "Reel Admin"}
         </h1>
         <p className="text-sm mb-6" style={{ color: "var(--fg-muted)" }}>
-          Changes are client-side only. Export JSON to save permanently.
+          Changes auto-save to your browser. Export JSON to back up permanently.
         </p>
 
         {/* Tabs */}
@@ -136,8 +152,8 @@ export default function AdminPage() {
           ))}
         </div>
 
-        {/* Export button */}
-        <div className="mb-6">
+        {/* Export + Reset */}
+        <div className="mb-6 flex gap-3">
           <button
             onClick={() => {
               const approved = reels.filter((r) => r.status === "approved");
@@ -149,6 +165,20 @@ export default function AdminPage() {
             style={{ borderColor: "var(--border)", color: "var(--fg)" }}
           >
             Export approved JSON
+          </button>
+          <button
+            onClick={() => {
+              if (confirm("Reset all changes? This clears your saved reviews.")) {
+                localStorage.removeItem("motionreelz_reels");
+                localStorage.removeItem("motionreelz_rejected");
+                setReels(allReels as Reel[]);
+                setRejected(rejectedReels as Reel[]);
+              }
+            }}
+            className="px-4 py-2 rounded-lg text-sm border transition hover:opacity-80"
+            style={{ borderColor: "var(--border)", color: "var(--fg-muted)" }}
+          >
+            Reset
           </button>
         </div>
 
