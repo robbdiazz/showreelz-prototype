@@ -14,7 +14,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="px-4 py-16" style={{ borderTop: "1px solid var(--border)" }}>
+    <section className="px-6 py-16" style={{ borderTop: "1px solid var(--border)" }}>
       <div className="max-w-2xl mx-auto text-center space-y-4">
         <h2 className="text-2xl font-bold" style={{ color: "var(--fg)" }}>Stay in the loop</h2>
         <p className="text-sm" style={{ color: "var(--fg-muted)" }}>

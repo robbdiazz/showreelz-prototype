@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="border-t px-4 py-8" style={{ borderColor: "var(--border)" }}>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="border-t px-6 py-8" style={{ borderColor: "var(--border)" }}>
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <p className="font-bold text-lg" style={{ color: "var(--fg)" }}>Showreelz</p>
           <p className="text-sm mt-1" style={{ color: "var(--fg-muted)" }}>Curated motion design reels</p>

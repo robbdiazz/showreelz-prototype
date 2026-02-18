@@ -118,14 +118,14 @@ export default function Home() {
     <div className="min-h-screen flex flex-col">
       <Navbar onSubmit={() => setShowModal(true)} />
 
-      {/* Filter tags - below nav */}
-      <div className="px-4 pt-4 pb-2" style={{ borderBottom: "1px solid var(--border)" }}>
-        <div className="max-w-6xl mx-auto flex flex-wrap gap-2">
+      {/* Filter tags - below nav, horizontal scroll on mobile */}
+      <div className="px-6 pt-4 pb-2" style={{ borderBottom: "1px solid var(--border)" }}>
+        <div className="max-w-5xl mx-auto flex gap-2 overflow-x-auto flex-nowrap scrollbar-hide">
           {ALL_TAGS.map((tag) => (
             <button
               key={tag}
               onClick={() => toggleFilter(tag)}
-              className="px-3 py-1 text-sm rounded-lg border transition"
+              className="px-3 py-1 text-sm rounded-lg border transition whitespace-nowrap shrink-0"
               style={{
                 background: activeFilters.includes(tag) ? "var(--accent)" : "transparent",
                 color: activeFilters.includes(tag) ? "var(--accent-fg)" : "var(--fg-muted)",
@@ -136,17 +136,17 @@ export default function Home() {
             </button>
           ))}
           {activeFilters.length > 0 && (
-            <button onClick={() => { setActiveFilters([]); setVisibleCount(PAGE_SIZE); }} className="px-3 py-1 text-sm transition hover:opacity-70" style={{ color: "var(--fg-muted)" }}>
+            <button onClick={() => { setActiveFilters([]); setVisibleCount(PAGE_SIZE); }} className="px-3 py-1 text-sm transition hover:opacity-70 whitespace-nowrap shrink-0" style={{ color: "var(--fg-muted)" }}>
               Clear
             </button>
           )}
         </div>
       </div>
 
-      {/* Grid - 3 columns */}
-      <main className="max-w-6xl mx-auto px-4 py-6 flex-1">
+      {/* Grid - 2 columns */}
+      <main className="max-w-5xl mx-auto px-6 py-6 flex-1">
         <p className="text-sm mb-4" style={{ color: "var(--fg-muted)" }}>{filtered.length} reels</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {visible.map((reel) => (
             <Link
               href={`/reel/${reel.slug}`}

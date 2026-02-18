@@ -32,7 +32,9 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* Letter spacing options - toggle class on body */
-.ls-tight { letter-spacing: -0.03em; }
-.ls-normal { letter-spacing: -0.015em; }
-.ls-default { letter-spacing: 0em; }
+/* Letter spacing - Option B: Moderate */
+body { letter-spacing: -0.015em; }
+
+/* Hide scrollbar for horizontal scroll tags */
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }

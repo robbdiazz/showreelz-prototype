@@ -67,7 +67,7 @@ export default function ReelPage() {
       <Navbar />
 
       {/* Content - 2 col video, 1 col details */}
-      <main className="max-w-6xl mx-auto px-4 py-8 flex-1 w-full">
+      <main className="max-w-5xl mx-auto px-6 py-8 flex-1 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Video - 2 cols */}
           <div className="lg:col-span-2">

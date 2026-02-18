@@ -50,10 +50,10 @@ function ThemeToggle() {
 export default function Navbar({ onSubmit }: { onSubmit?: () => void }) {
   return (
     <header
-      className="sticky top-0 z-10 backdrop-blur-md border-b px-4 py-4"
+      className="sticky top-0 z-10 backdrop-blur-md border-b px-6 py-4"
       style={{ background: "color-mix(in srgb, var(--bg) 90%, transparent)", borderColor: "var(--border)" }}
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between">
+      <div className="max-w-5xl mx-auto flex items-center justify-between">
         <Link href="/" className="text-xl font-bold" style={{ color: "var(--fg)" }}>
           Showreelz
         </Link>
